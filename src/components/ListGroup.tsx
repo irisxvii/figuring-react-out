@@ -1,14 +1,23 @@
+import { MouseEvent } from "react";
 
 function ListGroup(){
+
+const items = ["new york", "Tokyo", "london", "malappuram"]
+
+const handleClick = (event: MouseEvent) => console.log(event)
+
     return (
     <>
         <h1>List</h1>
         <ul className="list-group">
-            <li className="list-group-item">An item</li>
-            <li className="list-group-item">A second item</li>
-            <li className="list-group-item">A third item</li>
-            <li className="list-group-item">A fourth item</li>
-            <li className="list-group-item">And a fifth one</li>
+            {items.map((item) => 
+            (<li 
+                key={item} 
+                className='list-group-item'
+                onClick={handleClick}>
+                {item}
+                </li>
+            ))}  {/*instead of for loop we use map. while using this method key should be used*/}
         </ul>
     </>
     );
