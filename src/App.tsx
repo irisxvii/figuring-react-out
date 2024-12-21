@@ -1,7 +1,13 @@
-import ListGroup from "./components/ListGroup";
+import Footer from "./components/Footer";
+import Main from "./components/Main";
+import SideBar from "./components/SideBar";
 
-function App() {
-  return <div><ListGroup/></div>
+  function App() {
+  return <>
+    <Main/> 
+    <Footer/>
+    <SideBar/>
+      </>
 }
 
 export default App;
